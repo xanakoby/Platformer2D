@@ -1,7 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
+    public TMP_Text CoinsTMP;
+
     [SerializeField]
     private int coins = 0;
 
@@ -23,6 +26,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void OnCoinsChanged()
     {
-        Debug.Log("coin updated");
+        //Debug.Log("coin updated");
+        CoinsTMP.text = Coins.ToString();
     }
 }
